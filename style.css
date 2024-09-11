@@ -1,0 +1,107 @@
+.stApp > header {
+    background-color: transparent;
+background-clip: border-box;
+}
+
+
+.st-b7 {
+    background-color: #161616c3;
+color: #000;
+}
+.st-bb {
+    background: black;
+color: white;
+}
+.st-fp {
+    background: black;
+    color: white;
+}
+.st-ae {
+
+    justify-content: center;
+    align-content: center;
+display: flex;}
+.st-da{
+    background: black;
+    }    
+.st-emotion-cache-1pbsqtx{
+    display: none;
+    visibility: none;
+} 
+st-emotion-cache-lrlib eczjsme9:hover {
+    color: rgb(255, 75, 75);
+}
+.st-emotion-cache-vk3wp9{
+    background-image: url ("https://img.freepik.com/free-psd/gradient-waves-border-design_23-2150756125.jpg?w=996&t=st=1712599386~exp=1712599986~hmac=a733254314a5d61f159c6a9a18c91c2b6e69bb45332019bc432d0975e644d666");
+}
+
+.st-emotion-cache-pkbazv{
+    display: none;
+}
+.st-emotion-cache-17lntkn  {
+    display: none;
+    visibility: none;
+}
+.st-emotion-cache-1s3y5qe {
+display: none;
+visibility: none;
+}
+.st-emotion-cache-1oe5cao {
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+.nav-link.active[data-v-5af006b8] {
+    color: #0c0707;
+}
+.menu .nav-item .nav-link.active[data-v-5af006b8] {
+    background-color: #77da95;
+}
+.menu .nav-item .nav-link.active[data-v-5af006b8]{
+    background: transparent;
+}
+.st-emotion-cache-14rvwma {
+    background-image: linear-gradient(#868F96 , #596164);}
+.menu .container-xxl[data-v-5af006b8] {
+    background-image: linear-gradient(#868F96 , #596164);
+     border-radius: 0rem;
+}
+.menu .container-xxl[data-v-5af006b8] {
+    background-image: linear-gradient(#868F96 , #596164);
+    border-radius: .5rem;
+}
+.menu .container-xxl[data-v-5af006b8] {
+    background-color: #8ba8c1cf
+    ;
+    border-radius: .5rem
+}
+.st-emotion-cache-j7qwjs {
+    display: none;
+}
+.st-emotion-cache-14rvwma {
+    width: 405px;}
+    
+.menu .container-xxl[data-v-5af006b8] {
+    background-image: linear-gradient(#868F96 , #596164);}
+.st-cy {
+    background-color:grey;
+}
+.st-d4 {
+    background-color: #596164;
+}
+
+h2{
+    width: auto;
+     background-image: url('https://img.freepik.com/free-vector/kitchen-wooden-table-top-plank-wall-background_107791-14331.jpg?w=1380&t=st=1713803065~exp=1713803665~hmac=cb7a8b5db3d77a53ac309d2b38571e77e78ce3b17309b961d711637aae290122');
+    text-align: center;
+    color: black;
+height: fit-content; 
+}
+p{
+    color: #000000;
+}
+.st-emotion-cache-1s0bj5q {
+    padding-top: 0px;}
+.st-emotion-cache-165ax5l{
+    background-color: #C9C8C8;
+    height: 300;
+}

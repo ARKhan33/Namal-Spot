@@ -1,0 +1,7 @@
+[theme]
+base="light"
+primaryColor="#518fce"
+backgroundColor="#c9c8c8"
+secondaryBackgroundColor="#e6e5e5"
+[deprecation]
+showPyplotGlobalUse=false
