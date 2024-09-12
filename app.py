@@ -1,4 +1,3 @@
-import investpy.data
 import streamlit as st
 import streamlit.components.v1 as com
 import pandas as pd
@@ -6,18 +5,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 from streamlit_option_menu import option_menu
-from tqdm import tqdm
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
-import pages
-import time
-from st_pages import show_pages,hide_pages,get_pages
 from datetime import date,datetime
 import datetime
 from psx import stocks,data_reader,tickers
-import requests
 import plotly.graph_objects as go
-import warnings
 from sklearn.preprocessing import MinMaxScaler
 st.set_page_config(page_title="N SPOT",layout="wide",page_icon="icon.jpg")
 st.image("icon.jpg")
@@ -112,7 +105,7 @@ com.html(
      }
 """
 )
-ticker_list= ["ABL","ABOT","AGP","AICL","AIRLINK","AKBL","APL","ARPL","ATLH","ATRL","AVN","BAFL","BAHL","BNWM","BOP","CEPB","CNERGY","COLG","DAWH","DCR","DGKC","EFERT","EFUG","ENGRO","EPCL","FABL","FATIMA","FCCL","FCEPL","FFBL","FFC","FHAM","GADT","GATM","GHGL","GLAXO","HBL","HCAR","HGFA","HINOON","HMB","HUBC","IBFL","ILP","INDU","INIL","ISL","JDWS","JVDC","KAPCO","KEL","KOHC","KTML","LCI","LOTCHEM","LUCK","MARI","MCB","MEBL","MTL","MUGHAL","MUREB","NATF","NBP","NESTLE","NML","NRL","OGDC","PABC","PAEL","PAKT","PGLC","PIBTL","PIOC","POL","POML","PPL","PSEL","PSMC","PSO","PSX","PTC","RMPL","SCBPL","SEARL","SHEL","SHFA","SNGP","SRVI","SYS","TGL","THALL","TRG","UBL","UNITY","UPFL","YOUW"]
+ticker_list= ["ABL","ABOT","AGP","AICL","AIRLINK","AKBL","APL","ARPL","ATLH","ATRL","AVN","BAFL","BAHL","BNWM","BOP","CEPB","CNERGY","COLG","DAWH","DCR","DGKC","EFERT","EFUG","ENGRO","EPCL","FABL","FATIMA","FCCL","FCEPL","FFBL","FFC","FHAM","GADT","GATM","GHGL","GLAXO","HBL","HCAR","HGFA","HINOON","HMB","HUBC","IBFL","ILP","INDU","INIL","ISL","JDWS","JVDC","KAPCO","KEL","KOHC","KTML","LCI","LOTCHEM","LUCK","MARI","MCB","MEBL","MTL","MUGHAL","MUREB","NATF","NBP","NESTLE","NML","NRL","OGDC","PABC","PAEL","PAKT","PGLC","PIBTL","PIOC","POL","POML","PPL","PSEL","PSMC","PSO","PSX","PTCL","RMPL","SCBPL","SEARL","SHEL","SHFA","SNGP","SRVI","SYS","TGL","THALL","TRG","UBL","UNITY","UPFL","YOUW"]
 ticker=st.selectbox('Select the Company',ticker_list)
 with st.sidebar:
    selected=option_menu(
@@ -137,200 +130,7 @@ with st.sidebar:
 with open('style.css') as f:
     css = f.read()
 st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
-if  ticker == "ABL":
-   st.sidebar.image("Images\ABL.png")
-if  ticker == "ABOT":
-   st.sidebar.image("Images\ABOT.png")
-if  ticker == "AGP":
-   st.sidebar.image('Images/AGP.png')
-if  ticker == "AICL":
-   st.sidebar.image('Images/AICL.png')
-if  ticker == "AIRLINK":
-   st.sidebar.image('Images/AIRLINK.png')
-if  ticker == "AKBL":
-   st.sidebar.image('Images/AKBL.png')
-if  ticker == "APL":
-   st.sidebar.image('Images/APL.png')
-if  ticker == "ARPL":
-   st.sidebar.image('Images/ARPL.jpeg')
-if  ticker == "ATLH":
-   st.sidebar.image('Images/ATLH.jpeg')
-if  ticker == "ATRL":
-   st.sidebar.image('Images/ATRL.jpeg')
-if  ticker == "AVN":
-   st.sidebar.image('Images/AVN.jpeg')
-if  ticker == "BAFL":
-   st.sidebar.image('Images/BAFL.png')
-if  ticker == "BAHL":
-   st.sidebar.image('Images/BAHL.jpeg')
-if  ticker == "BNWM":
-   st.sidebar.image('Images/BNWM.png')
-if  ticker == "BOP":
-   st.sidebar.image('Images/BOP.png')
-if  ticker == "CEPB":
-   st.sidebar.image('Images/CEPB.png')
-if  ticker == "CNERGY":
-   st.sidebar.image('Images/CNERGY.png')
-if  ticker == "COLG":
-   st.sidebar.image('Images/COLG.png')
-if  ticker == "DAWH":
-   st.sidebar.image('Images/DAWH.jpeg')
-if  ticker == "DCR":
-   st.sidebar.image('Images/DCR.jpeg')
-if  ticker == "DGKC":
-   st.sidebar.image('Images/DGKC.png')
-if  ticker == "EFERT":
-   st.sidebar.image('Images/EFERT.jpeg')
-if  ticker == "EFUG":
-   st.sidebar.image('Images/EFUG.png')
-if  ticker == "ENGRO":
-   st.sidebar.image('Images/ENGRO.png')
-if  ticker == "EPCL":
-   st.sidebar.image('Images/EPCL.jpeg')
-if  ticker == "FABL":
-   st.sidebar.image('Images/FABL.jpeg')
-if  ticker == "FATIMA":
-   st.sidebar.image('Images/Fatima.jpeg')
-if  ticker == "FCCL":
-   st.sidebar.image('Images/FCCL.jpeg')
-if  ticker == "FCEPL":
-   st.sidebar.image('Images/FCEPL.png')
-if  ticker == "FFBL":
-   st.sidebar.image('Images/FFBL.png')
-if  ticker == "FFC":
-   st.sidebar.image('Images/FFC.png')
-if  ticker == "FHAM":
-   st.sidebar.image('Images/FHAM.jpeg')
-if  ticker == "GADT":
-   st.sidebar.image('Images/GADT.png')
-if  ticker == "GATM":
-   st.sidebar.image('Images/GATM.jpeg')
-if  ticker == "GHGL":
-   st.sidebar.image('Images/GHGL.png')
-if  ticker == "GLAXO":
-   st.sidebar.image('Images/GSK.png')
-if  ticker == "HBL":
-   st.sidebar.image('Images/HBL.png')
-if  ticker == "HCAR":
-   st.sidebar.image('Images/HCAR.png')
-if  ticker == "HGFA":
-   st.sidebar.image('Images/HGFA.jpeg')
-if  ticker == "HINOON":
-   data=pd.read_excel("DATA SET/HINOON_merged_final.xlsx")
-if  ticker == "HMB":
-   st.sidebar.image('Images/HMB.jpeg')
-if  ticker == "HUBC":
-   st.sidebar.image('Images/HUBC.png')
-if  ticker == "IBFL":
-   st.sidebar.image('Images/IBFL.jpeg')
-if  ticker == "ILP":
-   st.sidebar.image('Images/ILP.jpeg')
-if  ticker == "INDU":
-   st.sidebar.image('Images/INDU.png')
-if  ticker == "INIL":
-   st.sidebar.image('Images/INIL.jpeg')
-if  ticker == "ISL":
-   st.sidebar.image('Images/ISL.jpeg')
-if  ticker == "JDWS":
-   st.sidebar.image('Images/JDWS.jpeg')
-if  ticker == "JVDC":
-   st.sidebar.image('Images/JVDC.png')
-if  ticker == "KAPCO":
-   st.sidebar.image('Images/KAPCO.png')
-if  ticker == "KEL":
-   st.sidebar.image('Images/KEL.png')
-if  ticker == "KOHC":
-   st.sidebar.image('Images/KOHC.jpeg')
-if  ticker == "KTML":
-   st.sidebar.image('Images/KTML.jpeg')
-if  ticker == "LCI":
-   st.sidebar.image('Images/LCI.png')
-if  ticker == "LOTCHEM":
-   st.sidebar.image('Images/LOTCHEM.jpeg')
-if  ticker == "LUCK":
-   st.sidebar.image('Images/LUCK.jpeg')
-if  ticker == "MARI":
-   st.sidebar.image('Images/MARI.png')
-if  ticker == "MCB":
-   st.sidebar.image('Images/MCB.png')
-if  ticker == "MEBL":
-   st.sidebar.image('Images/MEBL.jpeg')
-if  ticker == "MTL":
-   st.sidebar.image('Images/MTL.png')
-if  ticker == "MUGHAL":
-   st.sidebar.image('Images/MUGHAL.png')
-if  ticker == "MUREB":
-   st.sidebar.image('Images/MUREB.jpeg')
-if  ticker == "NATF":
-   st.sidebar.image('Images/NATF.jpeg')
-if  ticker == "NBP":
-   st.sidebar.image('Images/NBP.jpeg')
-if  ticker == "NESTLE":
-   st.sidebar.image('Images/NESTLE.jpeg')
-if  ticker == "NML":
-   st.sidebar.image('Images/NML.png')
-if  ticker == "NRL":
-   st.sidebar.image('Images/NRL.png')
-if  ticker == "OGDC":
-   st.sidebar.image('Images/OGDC.png')
-if  ticker == "PABC":
-   st.sidebar.image('Images/PABC.jpeg')
-if  ticker == "PAEL":
-   st.sidebar.image('Images/PAEL.jpeg')
-if  ticker == "PAKT":
-    st.sidebar.image('Images/PAKT.jpeg')
-if  ticker == "PGLC":
-   st.sidebar.image('Images/PGLC.jpeg')
-if  ticker == "PIBTL":
-   st.sidebar.image('Images/PIBTL.png')
-if  ticker == "PIOC":
-   st.sidebar.image('Images/PIOC.jpeg')
-if  ticker == "POL":
-   st.sidebar.image('Images/POL.jpeg')
-if  ticker == "POML":
-   st.sidebar.image('Images/POML.jpeg')
-if  ticker == "PPL":
-   st.sidebar.image('Images/PPL.png')
-if  ticker == "PSEL":
-   st.sidebar.image('Images/PSEL.png')
-if  ticker == "PSMC":
-   st.sidebar.image('Images/PSMC.jpeg')
-if  ticker == "PSO":
-   st.sidebar.image('Images/PSO.png')
-if  ticker == "PSX":
-   st.sidebar.image('Images/PSX.jpeg')
-if  ticker == "PTC":
-   st.sidebar.image('Images/PTCL.png')
-if  ticker == "RMPL":
-   st.sidebar.image('Images/RMPL.jpeg')
-if  ticker == "SCBPL":
-   st.sidebar.image('Images/SCBPL.png')
-if  ticker == "SEARL":
-   st.sidebar.image("Images/SEARL.png")
-if  ticker == "SHEL":
-   st.sidebar.image('Images/shel.png')
-if  ticker == "SHFA":
-   st.sidebar.image('Images/SHFA.jpeg')
-if  ticker == "SNGP":
-   st.sidebar.image('Images/SNGP.png')
-if  ticker == "SRVI":
-   st.sidebar.image('Images/SRVI.jpeg')
-if  ticker == "SYS":
-   st.sidebar.image('Images/SYS.jpeg')
-if  ticker == "TGL":
-   st.sidebar.image('Images/TGL.jpeg')
-if  ticker == "THALL":
-   st.sidebar.image('Images/THAL.png')
-if  ticker == "TRG":
-   st.sidebar.image('Images/TRG.png')
-if  ticker == "UBL":
-   st.sidebar.image('Images/UBL.png')
-if  ticker == "UNITY":
-   st.sidebar.image('Images/UNITY.jpeg')
-if  ticker == "UPFL":
-   st.sidebar.image('Images/UPFL.jpeg')
-if  ticker == "YOUW":
-   st.sidebar.image('Images/YOUW.png')
+st.sidebar.image('Images/'+ticker+'.png')
 st.sidebar.header('Choose Date from below')
 start_date=st.sidebar.date_input('Start date',date (2024,1,1))
 data=stocks(ticker, start=start_date,end=datetime.date.today())
