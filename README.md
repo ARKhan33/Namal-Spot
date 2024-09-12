@@ -36,7 +36,6 @@ Go to the project directory,open command prompt and run
 
 ## 🖼️ Screenshots
 ![](Screenshots/Screenshot1.png)
-![](Screenshots/Screenshot2.png)
 ![](Screenshots/Screenshot3.png)
 ![](Screenshots/Screenshot4.png)
 ![](Screenshots/Screenshot5.png)
