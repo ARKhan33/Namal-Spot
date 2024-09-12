@@ -35,8 +35,8 @@ Go to the project directory,open command prompt and run
 ```
 
 ## Screenshots
-![](Screenshots/Screenshot1.png)
-![](Screenshots/Screenshot2.png)
-![](Screenshots/Screenshot3.png)
-![](Screenshots/Screenshot4.png)
-![](Screenshots/Screenshot5.png)
+![](Screenshots/Screenshot 1.png)
+![](Screenshots/Screenshot 2.png)
+![](Screenshots/Screenshot 3.png)
+![](Screenshots/Screenshot 4.png)
+![](Screenshots/Screenshot 5.png)
