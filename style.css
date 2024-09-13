@@ -2,8 +2,8 @@
     background-color: transparent;
 background-clip: border-box;
 }
-#GithubIcon {
-  visibility: hidden;
+header {
+    display: none;
 }
 
 .st-b7 {
