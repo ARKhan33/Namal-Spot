@@ -308,7 +308,7 @@ if  ticker == "SEARL":
     st.image("Images/SEARL.png")
     st.write("The Searle Company Limited (TSCL) is a pharmaceutical company in Pakistan that manufactures and sells consumer health and nutritional products. The company was incorporated in 1965 as a subsidiary of G.D. Searle & Co., U.S.A. and became a public limited company in 1993. TSCL has two manufacturing facilities in Lahore and Karachi, Pakistan, and has strategic alliances with international companies like Organon, Schering Plough, MSD, Vifor, and Santen.")
 if  ticker == "SHEL":
-    st.image('Images/SHELL.png')
+    st.image('Images/SHEL.png')
     st.write("Shell Pakistan Limited (SPL) is a Pakistani oil and gas company that has been in the South Asian region for over 100 years. It is a subsidiary of Shell plc, a British multinational oil and gas company headquartered in London. SPL is listed on the Pakistan Stock Exchange Limited and has a registered office at Shell House, 6, Ch. Khaliquzzaman Road, Karachi-75530, Pakistan. SPL has a network of over 600 sites, countrywide storage facilities, and a broad portfolio of global lubricant brands. It markets petroleum products and compressed natural gas, and blends and markets various kinds of lubricating oils. SPL's interests include downstream businesses such as retail, lubricants, and aviation.")
 if  ticker == "SHFA":
     st.image('Images/SHFA.png')
