@@ -2,7 +2,9 @@
     background-color: transparent;
 background-clip: border-box;
 }
-
+#GithubIcon {
+  visibility: hidden;
+}
 
 .st-b7 {
     background-color: #161616c3;
