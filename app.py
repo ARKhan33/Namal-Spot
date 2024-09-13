@@ -28,7 +28,7 @@ with st.sidebar:
 if selected == "Economic Indicators":
    st.switch_page("pages/page2.py")
 if selected == "Details of Stocks":
-   st.switch_page("pages/page3.py")
+   st.switch_page("pages/Page3.py")
 
 background_image = """
 <style>
