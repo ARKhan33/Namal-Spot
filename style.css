@@ -108,6 +108,11 @@ p{
     background-color: #C9C8C8;
     height: 300;
 }
-.viewerBadge_link__qRIco{
-    display:none !important;
+.viewerBadge_link__qRIco {
+	--tw-bg-opacity: 1;
+	background-color: rgb(255 75 75/var(--tw-bg-opacity));
+	border-top-left-radius: .5rem;
+	padding: 1rem 1.25rem;
+	z-index: 10;
+    display:none;
 }
