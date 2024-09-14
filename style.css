@@ -109,5 +109,5 @@ p{
     height: 300;
 }
 .viewerBadge_link__qRIco{
-    display:none;
+    display:none !important;
 }
