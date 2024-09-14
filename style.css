@@ -110,7 +110,7 @@ p{
 }
 .viewerBadge_link__qRIco {
 	--tw-bg-opacity: 1;
-	background-color: rgb(255 75 75/var(--tw-bg-opacity));
+	background-color: transparent;
 	border-top-left-radius: .5rem;
 	padding: 1rem 1.25rem;
 	z-index: 10;
